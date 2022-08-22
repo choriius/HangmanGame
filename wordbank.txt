@@ -58,7 +58,7 @@ because
 bed
 bee
 before
-behaviour
+behavior
 belief
 bell
 bent
@@ -138,7 +138,7 @@ coal
 coat
 cold
 collar
-colour
+color
 comb
 come
 comfort
@@ -320,7 +320,7 @@ hammer
 hand
 hanging
 happy
-harbour
+harbor
 hard
 harmony
 hat
@@ -346,7 +346,7 @@ hospital
 hour
 house
 how
-humour
+humor
 I
 ice
 idea
@@ -635,7 +635,6 @@ sense
 separate
 serious
 servant
-sex
 shade
 shake
 shame
@@ -656,7 +655,6 @@ simple
 sister
 size
 skin
-
 skirt
 sky
 sleep
@@ -679,7 +677,6 @@ sock
 soft
 solid
 some
-
 son
 song
 sort
@@ -849,6 +846,4 @@ yes
 yesterday
 you
 young
-Bernhard
-Breytenbach
 Android
