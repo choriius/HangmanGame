@@ -15,6 +15,17 @@ public class Main {
     System.out.println(printedLine);
   }
 
+  static void hangman(){
+     print("  ____");
+    print(" /    |");
+    print("      |");
+    print("      |");
+    print("      |");
+    print("---------- ");
+    
+  }
+  //switch- if case 1 has one error then add head and so on
+
   public static void main(String[] args) {
 
     List<String> wordbank = Collections.emptyList(); // takes 854 words from .txt file of hangman words and puts it into
@@ -29,10 +40,21 @@ public class Main {
     Collections.shuffle(wordbank); // shuffle wordbank everytime game is run
     String chosen = wordbank.get(0);
     int length = chosen.length();
-    print(chosen);
-    print(length);
+    //print(chosen);
+    //print(length);
+    print("~~~~~~~~~~~~~~~~~~~");
+    print("Welcome to Hangman!");
+    print("~~~~~~~~~~~~~~~~~~~");
+    print("To play, please type in you guess (1 letter) and if you know the whole word, type the whole word! Have fun!");
 
+    print("");
     //creates dash list of propper length
+    hangman();
+    print("");
+
+    ArrayList<String> wrongGuess = new ArrayList<String>(); 
+   
+   
     ArrayList<String> dashes = new ArrayList<String>();
     for (int i = 0; i < length; i++) {
       dashes.add("_");
@@ -47,6 +69,7 @@ public class Main {
 
     while (correct == false) {
       //gets new user input for each guess
+      print(" ");
       guess = input.nextLine();
       guessChar = guess.charAt(0);
       
@@ -54,7 +77,7 @@ public class Main {
         if (chosen.charAt(i1) == guessChar) {
           //sets the dash of correctly guessed letter to the letter
           dashes.set(i1, Character.toString(guessChar));
-        }
+        } 
       }
     
       if (chosen.contentEquals(guess)) {
@@ -63,9 +86,22 @@ public class Main {
         break;
       }
       //printes dashes results after guess
+      hangman();
       print(String.join(" ", dashes));
-      print(" ");
-    }
 
+      if (!chosen.contains(guess))
+       wrongGuess.add(guess);
+          print(" -----------------------");
+          print("| incorrect guesses     |");
+          print(" -----------------------");
+          print(wrongGuess);
+          print(" -----------------------");
+      
+      }
+
+    
+
+      
   }
+    
   }
